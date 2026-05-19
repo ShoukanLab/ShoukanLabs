@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shoukanlabs.lovable.app/sitemap.xml
+Sitemap: https://shoukan-labs.vercel.app/sitemap.xml
