@@ -21,6 +21,66 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Shoukan Labs — We Summon Digital Power" },
       { property: "og:description", content: "Custom software, cloud hardening, and offensive security — conjured with precision." },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://shoukanlabs.lovable.app/" },
+      { property: "og:site_name", content: "Shoukan Labs" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Shoukan Labs — We Summon Digital Power" },
+      { name: "twitter:description", content: "Custom software, cloud hardening, and offensive security — conjured with precision." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://shoukanlabs.lovable.app/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Shoukan Labs",
+          url: "https://shoukanlabs.lovable.app/",
+          description: "Custom software, cloud hardening, and offensive security — conjured with precision.",
+          email: "hello@shoukanlabs.com",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Shoukan Labs",
+          url: "https://shoukanlabs.lovable.app/",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: "Custom Software Development",
+          provider: { "@type": "Organization", name: "Shoukan Labs" },
+          areaServed: "Worldwide",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: "Penetration Testing",
+          provider: { "@type": "Organization", name: "Shoukan Labs" },
+          areaServed: "Worldwide",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: "Cloud Security",
+          provider: { "@type": "Organization", name: "Shoukan Labs" },
+          areaServed: "Worldwide",
+        }),
+      },
     ],
   }),
   component: Index,
