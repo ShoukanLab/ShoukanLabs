@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { Zap, Mail, Linkedin, Github, Check } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { SectionHeader } from "./services";
 import { SummoningCircle } from "../arcane/summoning-circle";
 
@@ -25,6 +26,8 @@ export function Contact() {
 
   const fieldCls =
     "w-full rounded-lg border border-border bg-background/40 px-4 py-3 text-sm backdrop-blur transition-all focus:border-[color:var(--electric)] focus:outline-none focus:ring-2 focus:ring-[color:var(--electric)]/30";
+  const selectTriggerCls = `${fieldCls} h-auto`;
+  const selectContentCls = "rounded-xl border border-border bg-background/95 text-foreground shadow-[var(--shadow-arcane-card)] backdrop-blur";
 
   return (
     <section id="contact" className="relative overflow-hidden py-32">
@@ -56,9 +59,18 @@ export function Contact() {
           </div>
           <div>
             <label className="font-sub mb-2 block text-xs uppercase tracking-widest text-foreground/60">Service</label>
-            <select value={form.service} onChange={(e) => setForm({ ...form, service: e.target.value })} className={fieldCls}>
-              {services.map((s) => <option key={s}>{s}</option>)}
-            </select>
+            <Select value={form.service} onValueChange={(value) => setForm({ ...form, service: value })}>
+              <SelectTrigger className={selectTriggerCls}>
+                <SelectValue placeholder="Choose a service" />
+              </SelectTrigger>
+              <SelectContent className={selectContentCls}>
+                {services.map((s) => (
+                  <SelectItem key={s} value={s}>
+                    {s}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
           <div>
             <label className="font-sub mb-2 block text-xs uppercase tracking-widest text-foreground/60">Message</label>
@@ -82,7 +94,7 @@ export function Contact() {
         </motion.form>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-foreground/60">
-          <a href="mailto:hello@shoukan.labs" className="inline-flex items-center gap-2 hover:text-[color:var(--electric)]"><Mail className="h-4 w-4" /> hello@shoukan.labs</a>
+          <a href="mailto:yarkhan025@gmail.com" className="inline-flex items-center gap-2 hover:text-[color:var(--electric)]"><Mail className="h-4 w-4" /> yarkhan025@gmail.com</a>
           <a href="#" className="inline-flex items-center gap-2 hover:text-[color:var(--electric)]"><Linkedin className="h-4 w-4" /> LinkedIn</a>
           <a href="#" className="inline-flex items-center gap-2 hover:text-[color:var(--electric)]"><Github className="h-4 w-4" /> GitHub</a>
         </div>

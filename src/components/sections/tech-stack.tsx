@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { SectionHeader } from "./services";
 
 const techs = [
-  "React", "Next.js", "Node", "TypeScript", "Python", "AWS",
+  "Java", "Python", "Go", "Node", "React", "AWS",
   "Docker", "K8s", "PostgreSQL", "Linux", "Burp", "Metasploit",
 ];
 
