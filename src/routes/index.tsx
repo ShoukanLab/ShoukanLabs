@@ -1,26 +1,48 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ArcaneCursor } from "@/components/arcane/cursor";
+import { Navbar } from "@/components/sections/navbar";
+import { Hero } from "@/components/sections/hero";
+import { Marquee } from "@/components/sections/marquee";
+import { Services } from "@/components/sections/services";
+import { Stats } from "@/components/sections/stats";
+import { Process } from "@/components/sections/process";
+import { Security } from "@/components/sections/security";
+import { Testimonials } from "@/components/sections/testimonials";
+import { TechStack } from "@/components/sections/tech-stack";
+import { Contact } from "@/components/sections/contact";
+import { Footer } from "@/components/sections/footer";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Shoukan Labs — We Summon Digital Power" },
+      { name: "description", content: "Premium software, cloud security, and penetration testing. Shoukan Labs forges secure, lightning-fast digital systems for ambitious teams." },
+      { property: "og:title", content: "Shoukan Labs — We Summon Digital Power" },
+      { property: "og:description", content: "Custom software, cloud hardening, and offensive security — conjured with precision." },
+      { property: "og:type", content: "website" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <ThemeProvider>
+      <ArcaneCursor />
+      <Navbar />
+      <main className="relative overflow-x-clip">
+        <Hero />
+        <Marquee />
+        <Services />
+        <Stats />
+        <Process />
+        <Security />
+        <Testimonials />
+        <TechStack />
+        <Contact />
+      </main>
+      <Footer />
+    </ThemeProvider>
+  );
 }
