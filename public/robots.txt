@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shoukanlabs.lovable.app/sitemap.xml
