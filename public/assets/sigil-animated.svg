@@ -1,0 +1,21 @@
+<svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shoukan Labs animated sigil">
+  <defs>
+    <linearGradient id="sigil-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6C63FF" />
+      <stop offset="100%" stop-color="#FFD700" />
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" fill="none" />
+  <circle cx="90" cy="90" r="78" fill="none" stroke="url(#sigil-g)" stroke-width="2" stroke-dasharray="6 6">
+    <animate attributeName="stroke-dashoffset" values="0;24" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="90" cy="90" r="56" fill="none" stroke="url(#sigil-g)" stroke-width="2" opacity="0.7">
+    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.4s" repeatCount="indefinite" />
+  </circle>
+  <g transform="translate(90 90)">
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite" />
+      <path d="M-26 -18 Q0 -34 26 -18 Q32 0 8 8 Q-26 18 -26 28 Q0 42 26 28" fill="none" stroke="url(#sigil-g)" stroke-width="4" stroke-linecap="round" />
+    </g>
+  </g>
+</svg>

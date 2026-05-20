@@ -15,13 +15,43 @@ const services = [
 ];
 
 export function Contact() {
-  const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const [error, setError] = useState("");
   const [form, setForm] = useState({ name: "", email: "", service: services[0], message: "" });
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (status === "sending") return;
+
     setStatus("sending");
-    setTimeout(() => setStatus("done"), 1400);
+    setError("");
+
+    try {
+      const res = await fetch("https://formspree.io/f/mkoejpge", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          service: form.service,
+          message: form.message,
+        }),
+      });
+
+      if (res.ok) {
+        setStatus("done");
+        setForm({ name: "", email: "", service: services[0], message: "" });
+      } else {
+        setStatus("error");
+        setError("Something went wrong. Please try again in a moment.");
+      }
+    } catch {
+      setStatus("error");
+      setError("Network error. Please check your connection and try again.");
+    }
   };
 
   const fieldCls =
@@ -78,7 +108,7 @@ export function Contact() {
           </div>
           <button
             type="submit"
-            disabled={status !== "idle"}
+            disabled={status === "sending"}
             className="font-sub group relative inline-flex w-full items-center justify-center gap-3 overflow-hidden rounded-full px-8 py-4 text-xs uppercase tracking-[0.3em] text-[color:var(--primary-foreground)] transition-all hover:scale-[1.02] disabled:cursor-not-allowed"
             style={{ background: "var(--gradient-arcane)", boxShadow: "var(--shadow-glow-electric)" }}
           >
@@ -90,7 +120,9 @@ export function Contact() {
               </>
             )}
             {status === "done" && (<><Check className="h-4 w-4" /> Signal Received</>)}
+            {status === "error" && (<><Zap className="h-4 w-4" /> Try Again</>)}
           </button>
+          {error && <p className="text-sm text-[color:var(--electric)]">{error}</p>}
         </motion.form>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-foreground/60">
