@@ -10,6 +10,15 @@ import {
 
 import appCss from "../styles.css?url";
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Shoukan Labs",
+  url: "https://shoukan-labs.com",
+  logo: "https://shoukan-labs.com/assets/logo-2.png",
+  sameAs: [],
+};
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -82,8 +91,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "icon", href: "/assets/logo-2.png", type: "image/png" },
-      { rel: "icon", href: "/assets/logo.svg", type: "image/svg+xml" },
+      { rel: "icon", href: "/assets/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/assets/favicon.svg", type: "image/svg+xml" },
+      { rel: "icon", href: "/assets/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+      { rel: "apple-touch-icon", href: "/assets/apple-touch-icon.png", sizes: "180x180" },
+      { rel: "manifest", href: "/assets/site.webmanifest" },
       {
         rel: "stylesheet",
         href: appCss,
@@ -107,6 +119,10 @@ function RootShell({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
       </head>
       <body>
         {children}
