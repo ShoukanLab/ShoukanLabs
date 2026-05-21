@@ -29,7 +29,7 @@ export function Footer() {
           <div>
             <h4 className="font-sub mb-4 text-xs uppercase tracking-[0.3em] text-[color:var(--thunder)]">Connect</h4>
             <ul className="space-y-2 text-sm text-foreground/70">
-              <li>hello@shoukan.labs</li>
+              <li>contact@shoukan-labs.com</li>
               <li>LinkedIn</li>
               <li>GitHub</li>
             </ul>
