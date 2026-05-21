@@ -21,14 +21,14 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Shoukan Labs — We Summon Digital Power" },
       { property: "og:description", content: "Custom software, cloud hardening, and offensive security — conjured with precision." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://shoukanlabs.lovable.app/" },
+      { property: "og:url", content: "https://shoukan-labs.com/" },
       { property: "og:site_name", content: "Shoukan Labs" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Shoukan Labs — We Summon Digital Power" },
       { name: "twitter:description", content: "Custom software, cloud hardening, and offensive security — conjured with precision." },
     ],
     links: [
-      { rel: "canonical", href: "https://shoukanlabs.lovable.app/" },
+      { rel: "canonical", href: "https://shoukan-labs.com/" },
     ],
     scripts: [
       {
@@ -37,7 +37,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Shoukan Labs",
-          url: "https://shoukanlabs.lovable.app/",
+          url: "https://shoukan-labs.com/",
           description: "Custom software, cloud hardening, and offensive security — conjured with precision.",
           email: "hello@shoukanlabs.com",
         }),
@@ -48,7 +48,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "Shoukan Labs",
-          url: "https://shoukanlabs.lovable.app/",
+          url: "https://shoukan-labs.com/",
         }),
       },
       {
