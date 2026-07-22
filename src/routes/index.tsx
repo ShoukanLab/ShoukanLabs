@@ -9,7 +9,6 @@ import { Stats } from "@/components/sections/stats";
 import { Process } from "@/components/sections/process";
 import { Security } from "@/components/sections/security";
 import { Testimonials } from "@/components/sections/testimonials";
-import { TechStack } from "@/components/sections/tech-stack";
 import { Contact } from "@/components/sections/contact";
 import { Footer } from "@/components/sections/footer";
 
@@ -99,7 +98,6 @@ function Index() {
         <Process />
         <Security />
         <Testimonials />
-        <TechStack />
         <Contact />
       </main>
       <Footer />

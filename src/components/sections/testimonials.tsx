@@ -4,9 +4,7 @@ import { Star } from "lucide-react";
 import { SectionHeader } from "./services";
 
 const items = [
-  { name: "Aria Voss", company: "Nyx Labs", initials: "AV", text: "They didn't just build our platform — they fortified it. The pentest report alone was worth twice what we paid.", stars: 5 },
-  { name: "Marcus Chen", company: "Helios Cloud", initials: "MC", text: "Shoukan refactored our app and our security posture in a single engagement. The work feels conjured, not coded.", stars: 5 },
-  { name: "Sana Rahimi", company: "Obsidian Health", initials: "SR", text: "Elite craftsmanship. They speak the language of attackers and architects with equal fluency.", stars: 5 },
+  { name: "Sofia Rehan", company: "Mahir Learning Academy", initials: "SR", text: "Outstanding work! The system developed for our coding academy has been extremely valuable, helping us manage our operations in a far more organized and efficient way. The team demonstrated exceptional technical expertise, professionalism, and a strong ability to translate complex requirements into practical, real-world solutions. Their problem-solving skills, creativity, attention to detail, and commitment to delivering a high-quality product were evident throughout the project. We are extremely pleased with the outcome and highly recommend their services to anyone looking for reliable and skilled software development professionals. We look forward to working together again on future projects.", stars: 5 },
 ];
 
 export function Testimonials() {

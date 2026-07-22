@@ -3,10 +3,10 @@ import { useEffect, useRef } from "react";
 import { SectionHeader } from "./services";
 
 const stats = [
-  { value: 150, suffix: "+", label: "Projects Summoned" },
-  { value: 98, suffix: "%", label: "Client Satisfaction" },
+  { value: 3, suffix: "+", label: "Projects Summoned" },
+  { value: 99, suffix: "%", label: "Client Satisfaction" },
   { value: 0, suffix: "", label: "Critical Breaches Post-Audit" },
-  { value: 5, suffix: "+", label: "Years of Dark Arts" },
+  { value: 1, suffix: "+", label: "Years of Dark Arts" },
 ];
 
 function Counter({ to, suffix }: { to: number; suffix: string }) {
