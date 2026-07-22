@@ -6,6 +6,7 @@ import { ThemeToggle } from "../arcane/theme-toggle";
 const links = [
   { href: "#home", label: "Home" },
   { href: "#services", label: "Services" },
+  { href: "/projects", label: "Works" },
   { href: "#process", label: "Process" },
   { href: "#security", label: "Security" },
   { href: "#testimonials", label: "Voices" },

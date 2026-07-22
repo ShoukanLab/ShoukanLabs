@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { SectionHeader } from "./services";
 
 const stats = [
-  { value: 3, suffix: "+", label: "Projects Summoned" },
+  { value: 4, suffix: "+", label: "Projects Summoned" },
   { value: 99, suffix: "%", label: "Client Satisfaction" },
   { value: 0, suffix: "", label: "Critical Breaches Post-Audit" },
   { value: 1, suffix: "+", label: "Years of Dark Arts" },

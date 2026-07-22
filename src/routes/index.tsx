@@ -5,6 +5,7 @@ import { Navbar } from "@/components/sections/navbar";
 import { Hero } from "@/components/sections/hero";
 import { Marquee } from "@/components/sections/marquee";
 import { Services } from "@/components/sections/services";
+import { Projects } from "@/components/sections/projects";
 import { Stats } from "@/components/sections/stats";
 import { Process } from "@/components/sections/process";
 import { Security } from "@/components/sections/security";
@@ -97,6 +98,7 @@ function Index() {
         <Stats />
         <Process />
         <Security />
+        <Projects />
         <Testimonials />
         <Contact />
       </main>
