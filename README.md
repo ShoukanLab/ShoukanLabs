@@ -129,7 +129,7 @@ Ready to conjure something extraordinary?
 
 | Channel | Link |
 |---|---|
-|  **Website** | [shoukan-labs.vercel.app](https://shoukan-labs.vercel.app) |
+|  **Website** | [shoukan-labs.vercel.app](https://shoukan-labs.com) |
 |  **Email** | [yarkhan025@gmail.com](mailto:yarkhan025@gmail.com) |
 
 Reach out for a **free audit** or **project estimate** — we'll schedule a discovery call and take it from there.
